@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+
+.collapse {
+    margin-right: 74px;
+}
+
+.collapse > ul > li > a{
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1.8px;
+    font-weight: 550;
+}
+
+.container-fluid{
+    margin-left: 60px;
+    
+}
+
+.container-fluid > a{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 600;
+    background: linear-gradient(to right, rgb(255, 65, 108), rgb(255, 75, 43));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.collapse > ul > li > a:hover{
+    background: linear-gradient(to right, rgb(242, 112, 156), rgb(255, 148, 114));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

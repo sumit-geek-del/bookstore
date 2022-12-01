@@ -1,0 +1,65 @@
+<div class="container">
+
+
+        <form [formGroup]="addBooksForm">
+
+        <div class="row ">
+    
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <h1 class="login_heading">Add New Book</h1>
+                <div class="row internal_form_div">
+
+                    <div class="col-md-6 col-lg-6 col-sm-12 d-flex flex-column">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Book Name</mat-label>
+                            <input matInput placeholder="Book Name" formControlName="name" autocomplete="off">
+                            <mat-error *ngIf="addBooksForm.controls['name']?.touched && addBooksForm.hasError('required', 'name')">Name is Required</mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Book Author</mat-label>
+                            <input matInput placeholder="Book Author" formControlName="author" autocomplete="off">
+                            <mat-error *ngIf="addBooksForm.controls['author']?.touched && addBooksForm.hasError('required', 'author')">Author Name is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-sm-12 d-flex flex-column">
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Book Language</mat-label>
+                            <input type="text" matInput placeholder="Book Language" formControlName="language" autocomplete="off">
+                            <mat-error *ngIf="addBooksForm.controls['language']?.touched && addBooksForm.hasError('required', 'language')">Book Language is Required</mat-error>
+                        </mat-form-field>
+    
+                        <mat-form-field class="example-full-width" appearance="outline">
+                            <mat-label>Book Category</mat-label>
+                            <input matInput placeholder="Book Category" formControlName="category" autocomplete="off">
+                            <mat-error *ngIf="addBooksForm.controls['category']?.touched && addBooksForm.hasError('required', 'category')">Book Category is Required</mat-error>
+                        </mat-form-field>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <button class="login_btn" (click)="addBook()">Add Book</button>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <button class="login_btn" (click)="closeModal()">Close</button>
+                        </div>
+                    </div>
+
+            </div>
+
+
+               
+                        
+    
+                      
+            </div>
+
+        </div>
+
+       
+
+    </form>
+  
+</div>

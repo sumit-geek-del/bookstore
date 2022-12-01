@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="internal_div">
+        <form [formGroup]="loginForm">
+            <div class="row form_row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                    <img src="../../../assets/Mobile-login-Cristina.jpg" alt="">
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 d-flex flex-column">
+
+                    <h1 class="login_heading">Log In to Your Account</h1>
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="Email" formControlName="email" autocomplete="off">
+                        <mat-error *ngIf="loginForm.controls['email']?.touched && loginForm.hasError('required', 'email')">Email is Required</mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="example-full-width" appearance="outline">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="********" formControlName="password" autocomplete="off">
+                        <mat-error *ngIf="loginForm.controls['password']?.touched && loginForm.hasError('required', 'password')">Password is Required</mat-error>
+                        <mat-error *ngIf="loginForm.controls['password']?.touched && loginForm.hasError('minlength', 'password')">Password should not be less than 8 characters</mat-error>
+
+                    </mat-form-field>
+
+                    <div class="row">
+
+                        <div class="col-lg-6 col-md-6 col-sm-12">
+                            <button class="login_btn" (click)="login()">Login</button>
+                        </div>
+
+                        <div class="col-lg-6 col-md-6 col-sm-12 account_div">
+                            <span class="normal_span">Don't have Account</span> <span class="signup_span">Sign Up</span>
+                        </div>
+
+                    </div>
+                    
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
